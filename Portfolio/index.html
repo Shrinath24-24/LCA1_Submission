@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My Portfolio Website showcasing my projects and skills.">
+    <title>My Portfolio</title>
+    <link href="portfolio.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        header {
+            background-color: #1f1f1f;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #2c2c2c;
+            padding: 10px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #444;
+            transform: scale(1.1);
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .project {
+            background-color: #1f1f1f;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .project img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .project img:hover {
+            transform: scale(1.05);
+        }
+
+        .project h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #ffffff;
+        }
+
+        .project p {
+            font-size: 1em;
+            color: #b0b0b0;
+        }
+
+        .project a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #333;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .project a:hover {
+            background-color: #555;
+            transform: scale(1.1);
+        }
+
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #1f1f1f;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+        }
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #333;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: #ffffff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #2c2c2c;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animated {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                margin: 5px 0;
+            }
+        }
+
+        footer {
+            background-color: #1f1f1f;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#about">About Me</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section id="projects" class="animated">
+        <h2>Projects</h2>
+        <div class="container">
+            <div class="project">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/85e6e1217060353.678a35679f6e3.png" alt="UpBeat Project">
+                <h2>UpBeat: A Creative Networking Platform for Artists</h2>
+                <p>Explore the project on Behance.</p>
+                <a href="https://www.behance.net/gallery/217060353/UpBeat-A-Creative-Networking-Platform-for-Artists" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/2eb253217123135.678b56623de08.png" alt="Smart Helmet Project">
+                <h2>Smart Helmet and Companion App</h2>
+                <p>Explore the project on Behance.</p>
+                <a href="https://www.behance.net/gallery/217123135/Smart-Helmet-and-Companion-App" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/1c1a5d217065499.678a465e910d0.png" alt="Book Cover Redesign">
+                <h2>Book Cover Redesign</h2>
+                <p>Explore the project on Behance.</p>
+                <a href="https://www.behance.net/gallery/217065499/Book-Cover-Redesign" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/aa7147217124113.678b5c0537042.png" alt="The Drama Scoop Redesign">
+                <h2>The Drama Scoop: Redesigning a Web App</h2>
+                <p>Explore the project on Behance.</p>
+                <a href="https://www.behance.net/gallery/217124113/The-Drama-Scoop-Redesigning-a-Web-App" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/f69e12217346121.678f63e093058.png" alt="Work-Life Struggle">
+                <h2>Work-Life Struggle</h2>
+                <p>Explore the project on Behance.</p>
+                <a href="https://www.behance.net/gallery/217346121/Work-Life-Struggle" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/27d0ab217345763.678f62ae5f5ab.png" alt="Decoding Academic Challenges">
+                <h2>Decoding Academic Challenges</h2>
+                <p>Explore the project on Behance.</p>
+                <a href="https://www.behance.net/gallery/217345763/Decoding-Academic-Challenges" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/445e7e217124977.678b60fd9f4ea.png" alt="Kiosk Design">
+                <h2>Kiosk Design</h2>
+                <p>Explore the project on Behance.</p>
+                <a href="https://www.behance.net/gallery/217124977/Kiosk-Design" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/2f4ca1204964409.66b272088e922.png" alt="Photography Portfolio">
+                <h2>Photography Portfolio</h2>
+                <p>Explore the project on Behance.</p>
+                <a href="https://www.behance.net/gallery/204964409/Photography-portfolio" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/b2c5f3204919891.66b1e7d18f904.jpg" alt="Omega Poster">
+                <h2>Omega Poster</h2>
+                <p>Explore the project on Behance.</p>
+                <a href="https://www.behance.net/gallery/204919891/Omega-Poster" target="_blank">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm <mark>Shrinath Pande</mark>, a passionate designer and developer. I love creating user-friendly and visually appealing designs.</p>
+        <details>
+            <summary>More about me</summary>
+            <p>I have experience in UX/UI design, web development, and photography. I enjoy working on projects that challenge me to think creatively and solve problems.</p>
+        </details>
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Skill</th>
+                    <th>Proficiency</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>UX/UI Design</td>
+                    <td>Advanced</td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>Intermediate</td>
+                </tr>
+                <tr>
+                    <td>Photography</td>
+                    <td>Advanced</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Shrinath Pande. All rights reserved.</p>
+    </footer>
+</body>
+</html>
